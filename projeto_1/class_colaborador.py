@@ -119,17 +119,19 @@ Relatório Mais Recente: {self.__relatorios[-1] if len(self.__relatorios) else "
 
 # Testando objeto colaborador 
 
-descricao = """
-                Análisa e extrai conhecimento dos dados da GeneriCompany, os dados princípalmente 
-                relacionados as vendas da empresa, com foco na predição e na prescrição. 
-            """
+def testes():
 
-colaborador_teste = Colaborador("Marcos", "02/03/2004", 21, "000.000.000.00",
-                                "Ciêntista de Dados", descricao, "02/01/2026",
-                                salario= 20000.40)
+    descricao = """
+                    Análisa e extrai conhecimento dos dados da GeneriCompany, os dados princípalmente 
+                    relacionados as vendas da empresa, com foco na predição e na prescrição. 
+                """
+
+    colaborador_teste = Colaborador("Marcos", "02/03/2004", 21, "000.000.000.00",
+                                    "Ciêntista de Dados", descricao, "02/01/2026",
+                                    salario= 20000.40)
 
 
-print(colaborador_teste)
+    print(colaborador_teste)
 
-print(colaborador_teste.relatorio_colaborador())
+    print(colaborador_teste.relatorio_colaborador())
 
