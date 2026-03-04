@@ -122,4 +122,6 @@ def main():
 
     print(objeto.nome)
 
-# main()
+
+if __name__ == '__main__':
+    main()

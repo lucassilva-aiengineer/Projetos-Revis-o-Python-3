@@ -119,7 +119,7 @@ Relatório Mais Recente: {self.__relatorios[-1] if len(self.__relatorios) else "
 
 # Testando objeto colaborador 
 
-def testes():
+def main():
 
     descricao = """
                     Análisa e extrai conhecimento dos dados da GeneriCompany, os dados princípalmente 
@@ -135,3 +135,7 @@ def testes():
 
     print(colaborador_teste.relatorio_colaborador())
 
+
+
+if __name__ == '__main__':
+    main()

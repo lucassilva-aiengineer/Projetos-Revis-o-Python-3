@@ -100,7 +100,7 @@ Nossos talentos: {[str(colaborador.nome + " ,") for colaborador in self.__colabo
 
 
 
-def teste_main():
+def main():
 
     equipe_a = Equipe("Equipe Bravo",   Colaborador("Mateus", 
                                                     "24/02/1997", 
@@ -113,5 +113,13 @@ def teste_main():
     print(equipe_a)
 
     print(equipe_a.lider)
-teste_main()
 
+# teste_main()
+
+
+# A função main() será executada apenas quando 
+# este arquivo for executado diretamente, não será 
+# executado em caso de importações 
+
+if __name__ == '__main__':
+    main()
