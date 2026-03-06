@@ -36,21 +36,31 @@ class DepartamentoRh:
 
 
 
-    def relatorio(self):
+    def relatorio(self)-> str:
 
         """Esse método exibirá um relatório com as princípais 
             informações relacionadas aos times e aos funcionários, 
-            sendo estas: valor da folha de pagamento, amplitude
+            sendo estas: valor total da folha de pagamento, amplitude
             dos salários, a diferença entre o maior e o menor salário.
         """
 
-        total_folha_pagamento = [for salario in self.__colaboradores] # Percorremos o atributo 
+        folha_pagamento = [colaborador.salario for colaborador in self.__colaboradores]# Percorremos o atributo 
         # da classe colaboradores e pegamos de cada um desses objetos o atributo, ou será melhor 
         # apenas somarmos os custos operacionais? 
 
+        total_folha_pagamento = sum(folha_pagamento)
 
+        maior_salario = max(folha_pagamento)
+        menor_salario = min(folha_pagamento) 
+
+        # Quem ganha os três maiores salários 
+
+        # Ordenando os colaboradores pelo valor do salário. 
+        colaboradores_maiores_salarios = sorted(self.colaboradores, key= lambda colaborador: colaborador.salario, reverse= True)
+
+        amplitude = maior_salario - menor_salario # A diferença entre o maior e o menor salário
 
         return f"""
-            
+
+
         """
-        pass 
