@@ -4,7 +4,7 @@ from class_colaborador import Colaborador
 
 class DepartamentoRh:
 
-    def __init__(self, lider_rh: Union[Colaborador, str]= "Colaborador", times: List[Optional[List[Colaborador]]] = None,
+    def __init__(self, lider_rh: Union[Colaborador, str]= "Colaborador", times: List[List[Colaborador]] = [],
         colaboradores: List[Colaborador]= []):
 
 
@@ -27,7 +27,7 @@ class DepartamentoRh:
         return self.__lider 
 
     @property 
-    def times(self)-> List[Optional[List[Colaborador]]]: # Retornamos um tipo de dados optional, ora uma lista de colaboradores ora uma lista de None
+    def times(self)-> List[[List[Colaborador]]]: # Retornamos um tipo de dados optional, ora uma lista de colaboradores ora uma lista de None
         return self.__times 
 
     @property 
@@ -60,7 +60,20 @@ class DepartamentoRh:
 
         amplitude = maior_salario - menor_salario # A diferença entre o maior e o menor salário
 
-        return f"""
+        return f"""====================================================================
+ID Departamento de RH: {self.__id_}
+Lider Departamento: {self.__lider}
+Quantidade de times: {sum([1 for a in self.__times])}
+====================================================================
+
+Total Folha de pagamento: {total_folha_pagamento}
+Maior Salário: {maior_salario}
+Menor Salário: {menor_salario}
+"""
+def main():
+    pass 
 
 
-        """
+
+if __name__ == '__main__':
+    main()
